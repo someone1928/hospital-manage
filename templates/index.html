@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+
+{% block title %}
+SuperNova | By Someone1928
+{% endblock %}
+
+
+
+{% block content %}
+
+{% load static %}
+
+<section class="banner_part p-3 my-2">
+  <div class="container">
+  <div class="row align-items-center">
+  <div class="col-lg-5 col-xl-5">
+  <div class="banner_text">
+  <div class="banner_text_iner text-white">
+  <h5>We are here for your care</h5>
+  <h1 class="font-weight-bold">Best Care &
+  Better Doctor !</h1>
+  <p>Hospital, an institution that is built, staffed, and equipped for the diagnosis of disease; for the treatment, both medical and surgical, of the sick and the injured; and for their housing during this process. The modern hospital also often serves as a centre for investigation and for teaching.</p>
+  <a href="{% url 'bookings' %}" class="btn btn-clr">Make an appointment</a>
+  </div>
+  </div>
+  </div>
+  <div class="col-lg-7">
+  <div class="banner_img">
+  <img src="https://preview.colorlib.com/theme/medico/img/xbanner_img.png.pagespeed.ic.MLXiW6RElW.webp" alt="">
+  </div>
+  </div>
+  </div>
+  </div>
+  </section>
+
+
+{% endblock %}
+
+

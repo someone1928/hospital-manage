@@ -1,0 +1,46 @@
+{% extends 'base.html' %}
+
+{% load crispy_forms_tags %}
+
+{% block title %}
+Register here
+{% endblock %}
+
+
+{% block content %}
+<!--Register--> 
+<div class="container py-5 col-md-6 ">
+	<h1 class="text-center text-white" style="text-decoration:underline">Register here</h1><br>
+
+	{% for message in messages %}
+    
+    <div class="alert alert-success" style="width:600px">
+        <a class="close" href="#" data-dismiss="alert">×</a>
+           {{ message }}
+    </div>
+
+	{% endfor %}
+
+
+    <div class="p-5" style="border-radius: 30px; background-color:#6db8bb">
+	<form method="POST">
+		{% csrf_token %}
+		{{ register_form|crispy }}                    
+		<button class="btn btn-primary" type="submit">Register</button>
+	</form><br>
+	<p class="text-left" style="font-size:15px">If you already have an account, <a href="/login">login</a> instead.</p>
+</div></div>
+
+{% comment %}
+
+this can be added to new page after login
+{% if user.is_authenticated %}
+        <h2 class="text-center">{{ user.username }}</h2>
+      {% endif %}
+      
+{% endcomment %}
+
+
+{% endblock %}
+
+
